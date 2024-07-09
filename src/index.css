@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    scroll-behavior: smooth;
+}
+
+.react-multiple-carousel__arrow{
+    @apply bg-white !important
+}
+
+.react-multiple-carousel__arrow::before {
+    @apply text-black !important;
+}
+
+#promotion{
+    @apply bg-green-100 !important;
+}
+#prev{
+    @apply bg-green-100 !important;
+}
+
+.p-image-toolbar{
+    @apply text-white !important;
+}
+
+.p-image-preview-indicator{
+    @apply text-white !important;
+}
+
+.p-image-preview-indicator .p-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.parallax-bg {
+    background-image: url('./assets/banner-img.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+@media (max-width: 767px) {
+    .parallax-bg {
+        background-attachment: scroll;
+        background-size: cover;
+    }
+}
