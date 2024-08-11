@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { FiPhoneCall, FiMail, FiMapPin } from 'react-icons/fi';
-import { kurumsal_adres, kurumsal_mail, kurumsal_numara } from '../constants/info';
+import { kurumsal_adres, kurumsal_mail, kurumsal_numara, kurumsal_numara2 } from '../constants/info';
 import Logo from './Logo';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -63,10 +63,18 @@ const Footer = () => {
 								<FiMapPin className='mr-2' />
 								<div>{kurumsal_adres}</div>
 							</div>
-							<a href={`tel:${kurumsal_numara}`} className='flex items-center mb-2'>
-								<FiPhoneCall className='mr-2' />
-								<div>{kurumsal_numara}</div>
-							</a>
+							<div className='flex space-x-2 items-center'>
+								<a href={`tel:${kurumsal_numara}`} className='flex items-center mb-2'>
+									<FiPhoneCall className='mr-2' />
+									<div>{kurumsal_numara}</div>
+								</a>
+
+								<a href={`tel:${kurumsal_numara2}`} className='flex items-center mb-2'>
+									<FiPhoneCall className='mr-2' />
+									<div>{kurumsal_numara2}</div>
+								</a>
+							</div>
+
 							<a href={`mailto:${kurumsal_mail}`} className='flex items-center mb-2'>
 								<FiMail className='mr-2' />
 								<div>{kurumsal_mail}</div>

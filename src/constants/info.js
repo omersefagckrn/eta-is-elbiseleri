@@ -5,6 +5,7 @@ import Banner4 from '../assets/banner-4.svg';
 
 export const kurumsal_mail = 'info@etaiselbiseleri.com';
 export const kurumsal_numara = '0541 506 3052';
+export const kurumsal_numara2 = '0506 103 5626';
 export const kurumsal_adres = 'Bahçelievler Mahallesi, Adnan Menderes Bulvarı, 23/A, Pendik/İstanbul';
 export const kurumsal_instagram = 'https://www.instagram.com/etagayrimenkulpendik?igsh=bWFmcnMxeThpNXRp&utm_source=qr';
 
