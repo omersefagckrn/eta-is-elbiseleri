@@ -23,9 +23,9 @@ const Navbar = () => {
 
 	return (
 		<motion.div initial='hidden' animate={controls} variants={navbarVariants} className='bg-[#fafafa]'>
-			<div className='w-full mx-auto container px-2 select-none'>
-				<div className='flex items-center justify-between text-center p-2'>
-					<div className='flex flex-col lg:flex-row space-x-0 lg:space-x-2 text-xs text-gray-500'>
+			<div className='container w-full px-2 mx-auto select-none'>
+				<div className='flex items-center justify-between p-2 text-center'>
+					<div className='flex flex-col space-x-0 text-xs text-gray-500 lg:flex-row lg:space-x-2'>
 						<div>Çalışma Saatlerimiz:</div>
 						<div>Pazartesi - Cuma: 08:30 - 18:30</div>
 					</div>
@@ -33,35 +33,34 @@ const Navbar = () => {
 						<a href={kurumsal_instagram} target='_blank' rel='noreferrer' className='text-black'>
 							<FaInstagram size={20} className='text-black cursor-pointer' />
 						</a>
-						<img className='w-6 h-6 object-cover' src='https://www.enginosgb.com.tr/wp-content/themes/rota/images/flags/tr.svg' alt='flag' />
 					</div>
 				</div>
 				<div className='flex flex-col justify-between w-full p-2'>
-					<div className='flex w-full items-center justify-between'>
+					<div className='flex items-center justify-between w-full'>
 						<Logo />
 						<div className='hidden md:flex md:space-x-6'>
-							<a href='#services' className='flex items-center p-2 md:p-0 text-black font-bold'>
+							<a href='#services' className='flex items-center p-2 font-bold text-black md:p-0'>
 								<FaBriefcase className='mr-2' /> Hizmetlerimiz
 							</a>
-							<a href='#products' className='flex items-center p-2 md:p-0 text-black font-bold'>
+							<a href='#products' className='flex items-center p-2 font-bold text-black md:p-0'>
 								<FaHome className='mr-2' /> Ürünlerimiz
 							</a>
-							<a href='#contact' className='flex items-center p-2 md:p-0 text-black font-bold'>
+							<a href='#contact' className='flex items-center p-2 font-bold text-black md:p-0'>
 								<FaPhoneAlt className='mr-2' /> İletişim
 							</a>
 						</div>
-						<div className='hidden lg:flex space-x-6'>
+						<div className='hidden space-x-6 lg:flex'>
 							<a href={`mailto:${kurumsal_mail}`} className='flex items-center space-x-2 text-sm'>
 								<MdAlternateEmail size={18} className='text-black' />
 								<div>
-									<div className='text-sm text-green-800 font-bold'>Mail Adresi</div>
+									<div className='text-sm font-bold text-green-800'>Mail Adresi</div>
 									<div className='text-black'>{kurumsal_mail}</div>
 								</div>
 							</a>
 							<div className='flex items-center space-x-2 text-sm'>
 								<LuPhone size={18} className='text-black' />
 								<a href={`tel:${kurumsal_numara}`}>
-									<div className='text-sm text-green-800 font-bold'>Sabit Telefon</div>
+									<div className='text-sm font-bold text-green-800'>Sabit Telefon</div>
 									<div className='text-black'>{kurumsal_numara}</div>
 								</a>
 							</div>
@@ -76,22 +75,22 @@ const Navbar = () => {
 								initial={{ opacity: 0, height: 0 }}
 								animate={{ opacity: 1, height: 'auto' }}
 								exit={{ opacity: 0, height: 0 }}
-								className='lg:hidden mt-2 text-center overflow-hidden'
+								className='mt-2 overflow-hidden text-center lg:hidden'
 							>
-								<a href='#services' className='flex items-center justify-center py-2 text-black font-bold'>
+								<a href='#services' className='flex items-center justify-center py-2 font-bold text-black'>
 									<FaBriefcase className='mr-2' /> Hizmetlerimiz
 								</a>
-								<a href='#products' className='flex items-center justify-center py-2 text-black font-bold'>
+								<a href='#products' className='flex items-center justify-center py-2 font-bold text-black'>
 									<FaHome className='mr-2' /> Ürünlerimiz
 								</a>
-								<a href='#contact' className='flex items-center justify-center py-2 text-black font-bold'>
+								<a href='#contact' className='flex items-center justify-center py-2 font-bold text-black'>
 									<FaPhoneAlt className='mr-2' /> İletişim
 								</a>
-								<a href={`mailto:${kurumsal_mail}`} className='flex items-center justify-center py-2 text-black font-bold'>
+								<a href={`mailto:${kurumsal_mail}`} className='flex items-center justify-center py-2 font-bold text-black'>
 									<MdAlternateEmail size={18} className='text-black' />
 									<span className='ml-2'>{kurumsal_mail}</span>
 								</a>
-								<a href={`tel:${kurumsal_numara}`} className='flex items-center justify-center py-2 text-black font-bold'>
+								<a href={`tel:${kurumsal_numara}`} className='flex items-center justify-center py-2 font-bold text-black'>
 									<LuPhone size={18} className='text-black' />
 									<span className='ml-2'>{kurumsal_numara}</span>
 								</a>

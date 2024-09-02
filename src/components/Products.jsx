@@ -48,14 +48,14 @@ const Products = () => {
 
 	return (
 		<motion.div id='products' ref={ref} initial='hidden' animate={controls} variants={itemVariants} className='flex flex-col lg:flex-row'>
-			<div className='w-full lg:w-1/4 p-4'>
-				<h2 className='text-xl font-bold mb-6'>Kategoriler</h2>
+			<div className='w-full p-4 lg:w-1/4'>
+				<h2 className='mb-6 text-xl font-bold'>Kategoriler</h2>
 				<input
 					type='text'
 					placeholder='Kategori Ara...'
 					value={searchQuery}
 					onChange={handleSearchChange}
-					className='py-2 px-4 mb-4 border rounded-lg shadow-md focus:outline-none w-full'
+					className='w-full px-4 py-2 mb-4 border rounded-lg shadow-md focus:outline-none'
 				/>
 				<div className='space-y-2'>
 					{filteredCategories.length > 0 ? (
@@ -78,15 +78,16 @@ const Products = () => {
 				</div>
 			</div>
 
-			<div className='w-full lg:w-3/4 p-4'>
-				<h2 className='text-2xl font-bold mb-4'>Ürünlerimiz</h2>
-				<motion.div
+			<div className='w-full p-4 lg:w-3/4'>
+				<h2 className='mb-4 text-2xl font-bold'>Ürünlerimiz</h2>
+				<div className='font-bold text-gray-400 underline'>Ürünlerimiz sizler için yenileniyor, lütfen daha sonra tekrar deneyin!</div>
+				{/* <motion.div
 					key={selectedCategory}
 					initial='hidden'
 					animate='visible'
 					variants={itemVariants}
 					transition={{ duration: 0.5 }}
-					className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'
+					className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'
 				>
 					{productsData[selectedCategory] && productsData[selectedCategory].length > 0 ? (
 						productsData[selectedCategory].map((product, index) => (
@@ -112,7 +113,7 @@ const Products = () => {
 							<div className='text-center text-gray-500'>Bu kategori için ürün bulunamadı</div>
 						</div>
 					)}
-				</motion.div>
+				</motion.div> */}
 			</div>
 		</motion.div>
 	);
